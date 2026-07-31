@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://i2act10g7ry5"]
+
+[ext_resource type="Texture2D" uid="uid://nf706blqb168" path="res://Sprite-0002.png" id="1_i7bbc"]
+[ext_resource type="Script" uid="uid://wwhdy6x4xblv" path="res://mainscreen.gd" id="1_ljyqm"]
+[ext_resource type="PackedScene" uid="uid://3mq25dhdgxg4" path="res://credit.tscn" id="3_185gw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
+font_size = 32
+font_color = Color(0.9945933, 1, 0.73992556, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 7
+shadow_color = Color(1, 1, 1, 1)
+
+[node name="Node2D" type="Node2D" unique_id=848756985]
+script = ExtResource("1_ljyqm")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2014972195]
+offset_left = -626.0
+offset_top = -371.0
+offset_right = 697.0
+offset_bottom = 366.0
+color = Color(0.99215686, 1, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=619239110]
+offset_left = -190.0
+offset_top = -298.0
+offset_right = 190.0
+offset_bottom = -253.0
+text = "생일기념 케이크 클릭커🍰"
+label_settings = SubResource("LabelSettings_bjqgx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1853246126]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1051666690]
+position = Vector2(-6, -104)
+scale = Vector2(10, 8.661)
+texture = ExtResource("1_i7bbc")
+
+[node name="시작" type="Button" parent="." unique_id=1426907660]
+offset_left = -192.0
+offset_top = 68.0
+offset_right = 194.0
+offset_bottom = 99.0
+text = "게임시작"
+
+[node name="끝" type="Button" parent="." unique_id=1354783952]
+offset_left = -197.0
+offset_top = 277.0
+offset_right = 198.0
+offset_bottom = 308.0
+text = "게임종료
+"
+
+[node name="크래딧" type="Button" parent="." unique_id=1726293982]
+offset_left = -198.0
+offset_top = 213.0
+offset_right = 198.0
+offset_bottom = 244.0
+text = "크레딧
+"
+
+[node name="도움말" type="Button" parent="." unique_id=819207526]
+offset_left = -195.0
+offset_top = 138.0
+offset_right = 196.0
+offset_bottom = 169.0
+text = "도움말
+"
+
+[node name="screen" parent="." unique_id=1920933610 instance=ExtResource("3_185gw")]
+visible = false
+
+[connection signal="pressed" from="시작" to="." method="start"]
+[connection signal="pressed" from="끝" to="." method="end"]

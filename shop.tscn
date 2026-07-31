@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://criyykpefv87l"]
+
+[ext_resource type="Script" uid="uid://b8n8yenocblys" path="res://shop.gd" id="1_viryw"]
+[ext_resource type="PackedScene" uid="uid://b7omp8vy4q71y" path="res://click.tscn" id="2_e7rdd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
+font_size = 64
+font_color = Color(0.8901961, 0.9490196, 0.99215686, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 13
+shadow_color = Color(1, 1, 0.2, 0.8)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e7rdd"]
+font_size = 32
+font_color = Color(0.73781985, 0.9289832, 0.889684, 1)
+outline_color = Color(1, 0.9647059, 0.827451, 0.9098039)
+shadow_size = 10
+shadow_color = Color(1, 0.9647059, 0.827451, 0.9098039)
+
+[node name="shop" type="Control" unique_id=331804872]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_viryw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=938552215]
+layout_mode = 0
+offset_left = 181.0
+offset_top = -134.0
+offset_right = 221.0
+offset_bottom = -94.0
+color = Color(0.03137255, 1, 1, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=1634853561]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 661.0
+
+[node name="ColorRect" type="ColorRect" parent="Panel" unique_id=2127302340]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 5.0
+offset_right = 1150.0
+offset_bottom = 666.0
+color = Color(1, 0.972549, 0.90588236, 1)
+
+[node name="TextureButton" type="Button" parent="Panel" unique_id=804493580]
+layout_mode = 0
+offset_left = 642.0
+offset_top = 247.0
+offset_right = 843.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 41
+text = "고용
+"
+
+[node name="Button" type="Button" parent="Panel" unique_id=302266557]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 247.0
+offset_right = 504.0
+offset_bottom = 414.0
+theme_override_font_sizes/font_size = 45
+text = "클릭업그레이드
+
+
+
+
+"
+
+[node name="Label" type="Label" parent="Panel" unique_id=145233209]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 125.0
+offset_bottom = 200.0
+text = "상점
+"
+label_settings = SubResource("LabelSettings_bjqgx")
+
+[node name="close" type="Button" parent="Panel" unique_id=1523186244]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 585.0
+offset_right = 192.0
+offset_bottom = 645.0
+text = "상점닫기
+"
+
+[node name="cake" type="Label" parent="Panel" unique_id=149211391]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 49.0
+offset_right = 982.0
+offset_bottom = 72.0
+label_settings = SubResource("LabelSettings_e7rdd")
+
+[node name="Control" parent="." unique_id=1664565084 instance=ExtResource("2_e7rdd")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Panel/Button" to="." method="upgrade"]
+[connection signal="pressed" from="Panel/close" to="." method="close"]

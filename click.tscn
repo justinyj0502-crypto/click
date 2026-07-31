@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://b7omp8vy4q71y"]
+
+[ext_resource type="Script" uid="uid://fjyofajxymlj" path="res://click.gd" id="1_ocfx5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
+font_size = 64
+font_color = Color(0.8901961, 0.9490196, 0.99215686, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 13
+shadow_color = Color(1, 0.9529412, 0.23529412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jovo"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jre5i"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1xlpn"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ex8gk"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxo5k"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqv50"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ocfx5"]
+font_size = 32
+font_color = Color(0.7372549, 0.92941177, 0.8901961, 1)
+outline_color = Color(1, 0.9647059, 0.827451, 0.9098039)
+shadow_color = Color(1, 0.9647059, 0.827451, 1)
+
+[node name="click" type="Control" unique_id=1664565084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ocfx5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1007696840]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 2.0
+offset_right = 1132.0
+offset_bottom = 657.0
+color = Color(1, 0.972549, 0.90588236, 1)
+
+[node name="유제" type="Button" parent="." unique_id=1180708726]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 131.0
+offset_right = 472.0
+offset_bottom = 237.0
+theme_override_font_sizes/font_size = 35
+text = "좋은 도구 구매
+
+
+
+
+
+"
+
+[node name="전조" type="Button" parent="." unique_id=647596676]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 132.0
+offset_right = 728.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 35
+text = "오븐 구매
+"
+
+[node name="신도" type="Button" parent="." unique_id=1727011960]
+layout_mode = 0
+offset_left = 813.0
+offset_top = 128.0
+offset_right = 1014.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 35
+text = "팔 2개 추가
+"
+
+[node name="Label" type="Label" parent="." unique_id=650095094]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 32.0
+offset_right = 143.0
+offset_bottom = 212.0
+text = "상점
+"
+label_settings = SubResource("LabelSettings_bjqgx")
+
+[node name="뒤로" type="Button" parent="." unique_id=1120167273]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 571.0
+offset_right = 122.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 36
+text = "뒤로"
+
+[node name="유제1" type="Label" parent="." unique_id=1782121860]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 259.0
+offset_right = 399.0
+offset_bottom = 304.0
+text = "+1c/c"
+label_settings = SubResource("LabelSettings_8jovo")
+
+[node name="전조1" type="Label" parent="." unique_id=1451038190]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 263.0
+offset_right = 693.0
+offset_bottom = 308.0
+text = "+15c/c"
+label_settings = SubResource("LabelSettings_jre5i")
+
+[node name="신도1" type="Label" parent="." unique_id=127639884]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 260.0
+offset_right = 971.0
+offset_bottom = 305.0
+text = "+100c/c"
+label_settings = SubResource("LabelSettings_1xlpn")
+
+[node name="유제2" type="Label" parent="." unique_id=1260286054]
+layout_mode = 0
+offset_left = 283.0
+offset_top = 69.0
+offset_right = 490.0
+offset_bottom = 114.0
+text = "50cake🍰"
+label_settings = SubResource("LabelSettings_ex8gk")
+
+[node name="전조2" type="Label" parent="." unique_id=954426109]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 64.0
+offset_right = 726.0
+offset_bottom = 157.0
+text = "600cake🍰
+"
+label_settings = SubResource("LabelSettings_xxo5k")
+
+[node name="신도2" type="Label" parent="." unique_id=1056121888]
+layout_mode = 0
+offset_left = 838.0
+offset_top = 66.0
+offset_right = 990.0
+offset_bottom = 111.0
+text = "8000cake🍰"
+label_settings = SubResource("LabelSettings_uqv50")
+
+[node name="cake" type="Label" parent="." unique_id=1062619242]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 49.0
+offset_right = 1166.0
+offset_bottom = 138.0
+label_settings = SubResource("LabelSettings_ocfx5")
+
+[connection signal="pressed" from="유제" to="." method="_on_유제_pressed"]
+[connection signal="pressed" from="전조" to="." method="_on_전조_pressed"]
+[connection signal="pressed" from="신도" to="." method="_on_신도_pressed"]
+[connection signal="pressed" from="뒤로" to="." method="close"]

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1unrgewv0ldb"]
+
+[node name="Node2D" type="Node2D" unique_id=1105134335]
+
+[node name="Button" type="Button" parent="." unique_id=565743254]
+offset_left = -1998.0
+offset_top = -1058.0
+offset_right = 2095.0
+offset_bottom = 1231.0
+theme_override_colors/icon_normal_color = Color(0.62352943, 0.62352943, 0.62352943, 0.60784316)
+theme_override_colors/icon_focus_color = Color(0.62352943, 0.62352943, 0.62352943, 0.60784316)
+theme_override_colors/icon_pressed_color = Color(0.62352943, 0.62352943, 0.62352943, 0.60784316)
+theme_override_colors/icon_hover_color = Color(0.62352943, 0.62352943, 0.62352943, 0.60784316)
+theme_override_colors/icon_hover_pressed_color = Color(0.62352943, 0.62352943, 0.62352943, 0.60784316)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
