@@ -25,7 +25,7 @@ func _ready() -> void:
 	Global.cake_changed.connect(update)
 	update()
 func _on_button_pressed() -> void:
-	Global.add_cake(cc)
+	Global.add_cake(Global.cc)
 
 	var tween = create_tween()
 	tween.tween_property(b, "scale", Vector2(0.95, 0.95), 0.05)
@@ -83,11 +83,11 @@ func _on_timer_timeout() -> void:
 func _process(_delta):
 	if Global.cake >= 1000000:
 		get_tree().change_scene_to_file("res://ending.tscn")
-
+	$AnimatedSprite2D.play("default")
 func show_plus():
 	var label = Label.new()
 
-	label.text = "+" + str(cc)
+	label.text = "+" + str(Global.cc)
 	label.position = b.position + Vector2(40, -20)
 
 	label.add_theme_font_size_override("font_size", 60)

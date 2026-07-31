@@ -23,20 +23,20 @@ func _on_button_pressed() -> void:
 func _on_알바_pressed() -> void:
 	if Global.cake >= 300:
 		Global.cp += 5
-		Global.spend_cake(300)
+		Global.spend_cake(ptp)
 		ptp *= 1.3
 		$"알바1/알바2/Label3".text = str(snapped(ptp,1)) + "cake🍰"
 
 func _on_제빵사_pressed() -> void:
 	if Global.cake >= 18000:
 		Global.cp += 150
-		Global.spend_cake(18000)
+		Global.spend_cake(bkp)
 		bkp *= 1.3
 		$"제빵사1/Label/Label".text = str(snapped(bkp,1)) + "cake🍰"
 		
 func _on_로봇_pressed() -> void:
 	if Global.cake >= 250000:
 		Global.cp += 1000
-		Global.spend_cake(250000)
+		Global.spend_cake(rbp)
 		rbp *= 1.3
 		$"로봇1/Label/Label2/Label".text = str(snapped(rbp,1)) + "cake🍰"

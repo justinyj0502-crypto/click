@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://db0n585mijqt4" path="res://Sprite-0001.png" id="4_7jktm"]
 [ext_resource type="Texture2D" uid="uid://dv3v1whs1hgyf" path="res://Sprite-0013.png" id="7_vef74"]
 [ext_resource type="Texture2D" uid="uid://b5r0ge6tw2xt2" path="res://Sprite-0010.png" id="8_hve3p"]
+[ext_resource type="Texture2D" uid="uid://chyrd7uyigh1h" path="res://Sprite-0003.png" id="10_mfdv2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
 font_size = 64
@@ -19,6 +20,42 @@ shadow_color = Color(1, 1, 0.7921569, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_8jovo"]
 font_size = 64
 font_color = Color(0.45323175, 0.45323175, 0.45323175, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iotsf"]
+atlas = ExtResource("10_mfdv2")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc2xo"]
+atlas = ExtResource("10_mfdv2")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_215e1"]
+atlas = ExtResource("10_mfdv2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7sc4i"]
+atlas = ExtResource("10_mfdv2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjqgx"]
+animations = [{
+"frames": [{
+"duration": 10.0,
+"texture": SubResource("AtlasTexture_iotsf")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_lc2xo")
+}, {
+"duration": 7.0,
+"texture": SubResource("AtlasTexture_215e1")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_7sc4i")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="game" type="Node2D" unique_id=1292408160]
 script = ExtResource("1_feb5d")
@@ -52,10 +89,14 @@ position = Vector2(-278.00003, -166.00002)
 scale = Vector2(10, 10)
 texture = ExtResource("8_hve3p")
 
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=2049655479]
+position = Vector2(-17, 52.00002)
+scale = Vector2(14.3125, 8.75)
+
 [node name="Button" type="TextureButton" parent="." unique_id=278923630]
-offset_left = -174.99998
+offset_left = -175.99998
 offset_top = -153.99998
-offset_right = 145.00002
+offset_right = 144.00002
 offset_bottom = 166.00002
 texture_normal = ExtResource("1_80nbo")
 texture_pressed = ExtResource("1_80nbo")
@@ -124,6 +165,27 @@ theme_override_colors/icon_hover_pressed_color = Color(0.67058825, 0.67058825, 0
 
 [node name="Timer" type="Timer" parent="." unique_id=1162690909]
 autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393334026]
+position = Vector2(219, 109)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+frame_progress = 0.037053254
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=201388830]
+position = Vector2(200.00002, 110)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+frame_progress = 0.039108478
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=826629938]
+position = Vector2(215, 114)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+frame_progress = 0.6201644
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
