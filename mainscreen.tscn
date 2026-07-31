@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://nf706blqb168" path="res://Sprite-0002.png" id="1_i7bbc"]
 [ext_resource type="Script" uid="uid://wwhdy6x4xblv" path="res://mainscreen.gd" id="1_ljyqm"]
+[ext_resource type="Texture2D" uid="uid://dsqacme8i4o2y" path="res://dlalwl/다랜드.png" id="2_185gw"]
 [ext_resource type="PackedScene" uid="uid://3mq25dhdgxg4" path="res://credit.tscn" id="3_185gw"]
+[ext_resource type="Texture2D" uid="uid://b5r0ge6tw2xt2" path="res://Sprite-0010.png" id="4_ljyqm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
 font_size = 32
@@ -11,6 +13,12 @@ outline_size = 2
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 7
 shadow_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jovo"]
+font_size = 19
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+outline_color = Color(1, 1, 0.8980392, 1)
 
 [node name="Node2D" type="Node2D" unique_id=848756985]
 script = ExtResource("1_ljyqm")
@@ -23,12 +31,17 @@ offset_bottom = 366.0
 color = Color(0.99215686, 1, 1, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2018483583]
+position = Vector2(1378, -156)
+scale = Vector2(17.968748, 10)
+texture = ExtResource("2_185gw")
+
 [node name="Label" type="Label" parent="." unique_id=619239110]
-offset_left = -190.0
-offset_top = -298.0
-offset_right = 190.0
-offset_bottom = -253.0
-text = "생일기념 케이크 클릭커🍰"
+offset_left = -150.0
+offset_top = -300.0
+offset_right = 230.0
+offset_bottom = -255.0
+text = "생일 케이크 클릭커🍰"
 label_settings = SubResource("LabelSettings_bjqgx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1853246126]
@@ -39,38 +52,44 @@ scale = Vector2(10, 8.661)
 texture = ExtResource("1_i7bbc")
 
 [node name="시작" type="Button" parent="." unique_id=1426907660]
-offset_left = -192.0
-offset_top = 68.0
-offset_right = 194.0
-offset_bottom = 99.0
+offset_left = -189.0
+offset_top = 39.0
+offset_right = 197.0
+offset_bottom = 105.0
 text = "게임시작"
 
 [node name="끝" type="Button" parent="." unique_id=1354783952]
-offset_left = -197.0
-offset_top = 277.0
-offset_right = 198.0
-offset_bottom = 308.0
+offset_left = -189.0
+offset_top = 221.0
+offset_right = 197.0
+offset_bottom = 287.0
 text = "게임종료
 "
 
-[node name="크래딧" type="Button" parent="." unique_id=1726293982]
-offset_left = -198.0
-offset_top = 213.0
-offset_right = 198.0
-offset_bottom = 244.0
-text = "크레딧
-"
-
 [node name="도움말" type="Button" parent="." unique_id=819207526]
-offset_left = -195.0
-offset_top = 138.0
-offset_right = 196.0
-offset_bottom = 169.0
+offset_left = -189.0
+offset_top = 128.215
+offset_right = 197.0
+offset_bottom = 194.21501
 text = "도움말
 "
 
 [node name="screen" parent="." unique_id=1920933610 instance=ExtResource("3_185gw")]
 visible = false
+
+[node name="Label2" type="Label" parent="." unique_id=1742540265]
+offset_left = 359.0
+offset_top = 290.0
+offset_right = 559.0
+offset_bottom = 317.0
+text = "V2.1.0 Made by 김예준"
+label_settings = SubResource("LabelSettings_8jovo")
+
+[node name="Node" type="Sprite2D" parent="." unique_id=713819971]
+position = Vector2(-347, -205.00002)
+rotation = 0.13962634
+scale = Vector2(5, 5)
+texture = ExtResource("4_ljyqm")
 
 [connection signal="pressed" from="시작" to="." method="start"]
 [connection signal="pressed" from="끝" to="." method="end"]

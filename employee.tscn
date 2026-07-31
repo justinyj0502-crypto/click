@@ -1,9 +1,257 @@
 [gd_scene format=3 uid="uid://25tcn6vvv7my"]
 
-[node name="Control" type="Control" unique_id=724082851]
+[ext_resource type="Script" uid="uid://dgdd2ni8j320g" path="res://employee.gd" id="1_44iv1"]
+[ext_resource type="Texture2D" uid="uid://c28024l0h07c8" path="res://Sprite-0007.png" id="2_wrfqp"]
+[ext_resource type="Texture2D" uid="uid://b0flwdc3yharr" path="res://Sprite-0008.png" id="3_3bulx"]
+[ext_resource type="Texture2D" uid="uid://sbxfie131oki" path="res://로봇.png" id="4_gnxic"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
+font_size = 64
+font_color = Color(0.8901961, 0.9490196, 0.99215686, 1)
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 13
+shadow_color = Color(1, 0.9529412, 0.23529412, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1xlpn"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xxo5k"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jovo"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jre5i"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ex8gk"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5nte"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_uqv50"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8p2kq"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mop80"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_wrfqp"]
+font_size = 33
+font_color = Color(0.7372549, 0.92941177, 0.8901961, 1)
+shadow_size = 10
+shadow_color = Color(1, 0.9647059, 0.827451, 0.9098039)
+
+[node name="emplyee" type="Control" unique_id=724082851]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_44iv1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1493283183]
+layout_mode = 0
+offset_left = -32.0
+offset_top = 5.0
+offset_right = 1149.0
+offset_bottom = 666.0
+color = Color(1, 0.972549, 0.90588236, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1903313712]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 20.0
+offset_right = 125.0
+offset_bottom = 109.0
+text = "상점"
+label_settings = SubResource("LabelSettings_bjqgx")
+
+[node name="알바" type="TextureButton" parent="." unique_id=1752108267]
+layout_mode = 0
+offset_left = 145.00002
+offset_top = 183.00003
+offset_right = 177.00002
+offset_bottom = 215.00003
+scale = Vector2(10, 10)
+texture_normal = ExtResource("2_wrfqp")
+stretch_mode = 0
+
+[node name="제빵사" type="TextureButton" parent="." unique_id=527638516]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 182.00002
+offset_right = 480.0
+offset_bottom = 214.00003
+scale = Vector2(10, 10)
+texture_normal = ExtResource("3_3bulx")
+stretch_mode = 0
+
+[node name="로봇" type="TextureButton" parent="." unique_id=662899423]
+layout_mode = 0
+offset_left = 777.0
+offset_top = 176.00002
+offset_right = 809.0
+offset_bottom = 208.00003
+scale = Vector2(10, 10)
+texture_normal = ExtResource("4_gnxic")
+stretch_mode = 0
+
+[node name="알바1" type="Label" parent="." unique_id=1199354156]
+layout_mode = 0
+offset_left = 277.0
+offset_top = 142.0
+offset_right = 341.0
+offset_bottom = 187.0
+text = "알바"
+label_settings = SubResource("LabelSettings_1xlpn")
+
+[node name="알바2" type="Label" parent="알바1" unique_id=1204717745]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -58.0
+offset_right = 90.0
+offset_bottom = -13.0
+text = "5c/s🍰"
+label_settings = SubResource("LabelSettings_xxo5k")
+
+[node name="Label3" type="Label" parent="알바1/알바2" unique_id=327193633]
+layout_mode = 0
+offset_left = -46.0
+offset_top = 393.0
+offset_right = 124.0
+offset_bottom = 486.0
+text = "300cake🍰
+"
+label_settings = SubResource("LabelSettings_8jovo")
+
+[node name="제빵사1" type="Label" parent="." unique_id=1987945494]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 141.0
+offset_right = 659.0
+offset_bottom = 186.0
+text = "제빵사"
+label_settings = SubResource("LabelSettings_jre5i")
+
+[node name="Label" type="Label" parent="제빵사1" unique_id=1256204398]
+layout_mode = 0
+offset_left = -22.0
+offset_top = -52.0
+offset_right = 121.0
+offset_bottom = -7.0
+text = "150c/s🍰"
+label_settings = SubResource("LabelSettings_ex8gk")
+
+[node name="Label2" type="Label" parent="제빵사1/Label" unique_id=1655351902]
+layout_mode = 0
+offset_top = -16.0
+offset_right = 40.0
+offset_bottom = 7.0
+
+[node name="Label" type="Label" parent="제빵사1/Label" unique_id=1039291273]
+layout_mode = 0
+offset_left = -39.0
+offset_top = 402.0
+offset_right = 176.0
+offset_bottom = 447.0
+text = "18,000cake🍰"
+label_settings = SubResource("LabelSettings_m5nte")
+
+[node name="로봇1" type="Label" parent="." unique_id=1078453340]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 142.0
+offset_right = 970.0
+offset_bottom = 235.0
+text = "로봇
+"
+label_settings = SubResource("LabelSettings_uqv50")
+
+[node name="Label" type="Label" parent="로봇1" unique_id=914656790]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 15.0
+offset_right = 114.0
+offset_bottom = 38.0
+
+[node name="Label2" type="Label" parent="로봇1/Label" unique_id=2088346809]
+layout_mode = 0
+offset_left = -120.0
+offset_top = -63.0
+offset_right = 41.0
+offset_bottom = -18.0
+text = "1000c/s🍰"
+label_settings = SubResource("LabelSettings_8p2kq")
+
+[node name="Label" type="Label" parent="로봇1/Label/Label2" unique_id=1622510959]
+layout_mode = 0
+offset_left = -38.0
+offset_top = 410.0
+offset_right = 196.0
+offset_bottom = 455.0
+text = "250,000cake🍰"
+label_settings = SubResource("LabelSettings_mop80")
+
+[node name="cake" type="Label" parent="." unique_id=485168870]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 49.0
+offset_right = 982.0
+offset_bottom = 94.0
+label_settings = SubResource("LabelSettings_wrfqp")
+
+[node name="Button" type="Button" parent="." unique_id=680485522]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 571.0
+offset_right = 122.0
+offset_bottom = 631.0
+theme_override_font_sizes/font_size = 36
+text = "뒤로"
+
+[connection signal="pressed" from="알바" to="." method="_on_알바_pressed"]
+[connection signal="pressed" from="제빵사" to="." method="_on_제빵사_pressed"]
+[connection signal="pressed" from="로봇" to="." method="_on_로봇_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

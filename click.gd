@@ -23,7 +23,8 @@ func _ready():
 	game.ujpr.connect(pru)
 	game.sdpr.connect(prs)
 	game.jjpr.connect(prj)
-
+	Global.cake_changed.connect(update)
+	update()
 func cake(cake):
 	cakecount.text = "케이크: " + str(snapped(cake,1))
 func pru(pru):
@@ -32,3 +33,5 @@ func prs(prs):
 	$"신도2".text= str(snapped(prs,1)) + "cake🍰"
 func prj(prj):
 	prjj.text = str(snapped(prj,1)) + "cake🍰"
+func update(_cake = 0):
+	cakecount.text = "케이크: " + str(snapped(Global.cake, 1))

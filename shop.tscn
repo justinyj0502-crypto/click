@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8n8yenocblys" path="res://shop.gd" id="1_viryw"]
 [ext_resource type="PackedScene" uid="uid://b7omp8vy4q71y" path="res://click.tscn" id="2_e7rdd"]
+[ext_resource type="PackedScene" uid="uid://25tcn6vvv7my" path="res://employee.tscn" id="3_blqjs"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
 font_size = 64
@@ -13,7 +14,7 @@ shadow_color = Color(1, 1, 0.2, 0.8)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e7rdd"]
 font_size = 32
-font_color = Color(0.73781985, 0.9289832, 0.889684, 1)
+font_color = Color(0.7372549, 0.92941177, 0.8901961, 1)
 outline_color = Color(1, 0.9647059, 0.827451, 0.9098039)
 shadow_size = 10
 shadow_color = Color(1, 0.9647059, 0.827451, 0.9098039)
@@ -102,5 +103,10 @@ label_settings = SubResource("LabelSettings_e7rdd")
 visible = false
 layout_mode = 1
 
+[node name="emplyee" parent="." unique_id=724082851 instance=ExtResource("3_blqjs")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="upgrade"]
 [connection signal="pressed" from="Panel/close" to="." method="close"]
