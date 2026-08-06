@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://d15rgjdx67404"]
+
+[ext_resource type="Script" uid="uid://deqqr3uu0cklm" path="res://ending.gd" id="1_0t84q"]
+[ext_resource type="AudioStream" uid="uid://cucr31puxgnr2" path="res://byronatoraustralia-happy-birthday-guitar-11795.mp3" id="1_fsb5k"]
+[ext_resource type="AudioStream" uid="uid://dkbtn77160ht3" path="res://universfield-birthday-party-horn-250238.mp3" id="2_dmh3q"]
+[ext_resource type="Texture2D" uid="uid://cjlib622bg6ou" path="res://neding1.png" id="3_e2dv3"]
+[ext_resource type="Texture2D" uid="uid://cvhiqbacchqv0" path="res://neding2.png" id="4_0t84q"]
+[ext_resource type="Texture2D" uid="uid://dkfjbotx78n62" path="res://neding3.png" id="5_a2d7o"]
+[ext_resource type="Texture2D" uid="uid://bd2h4h4xs7w2g" path="res://neding4.png" id="6_ujx65"]
+[ext_resource type="Texture2D" uid="uid://decfst1wpn8ee" path="res://neding5.png" id="7_3740v"]
+[ext_resource type="Texture2D" uid="uid://3aa0h8sej1g8" path="res://neding6.png" id="8_220av"]
+[ext_resource type="Texture2D" uid="uid://b02y1d5yc4d04" path="res://neding7.png" id="9_udx4x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bjqgx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_e2dv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0t84q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a2d7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ujx65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3740v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_220av")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_udx4x")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="ending" type="Node2D" unique_id=2071011174]
+script = ExtResource("1_0t84q")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1145636031]
+stream = ExtResource("1_fsb5k")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=815371403]
+stream = ExtResource("2_dmh3q")
+volume_db = -40.945
+autoplay = true
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=172160763]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="." unique_id=1212897407]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AudioStreamPlayer2D5" type="AudioStreamPlayer2D" parent="." unique_id=517835663]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AudioStreamPlayer2D6" type="AudioStreamPlayer2D" parent="." unique_id=313725464]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AudioStreamPlayer2D7" type="AudioStreamPlayer2D" parent="." unique_id=1915373611]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AudioStreamPlayer2D8" type="AudioStreamPlayer2D" parent="." unique_id=1911247719]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AudioStreamPlayer2D9" type="AudioStreamPlayer2D" parent="." unique_id=821614010]
+stream = ExtResource("2_dmh3q")
+autoplay = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1942927858]
+position = Vector2(-47.5, 0)
+scale = Vector2(0.9241214, 1)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1162065782]
+
+[connection signal="finished" from="AudioStreamPlayer2D2" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D3" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D4" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D5" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D6" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D7" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D8" to="." method="_on_audio_stream_player_2d_2_finished"]
+[connection signal="finished" from="AudioStreamPlayer2D9" to="." method="_on_audio_stream_player_2d_2_finished"]

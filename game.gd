@@ -2,11 +2,6 @@ extends Node2D
 
 signal ck(count:int)
 
-signal ujpr(price:int)
-signal jjpr(price:int)
-signal sdpr(price:int)
-
-signal pt(price:int)
 
 @onready var a = $"cake count"
 @onready var s = $shop
@@ -14,66 +9,33 @@ signal pt(price:int)
 @onready var b = $Button
 @onready var floating_text = $Node2D
 
-var prs := 8000
-var prj := 600
-var pru := 50
-
-var cc = 1
 
 func _ready() -> void:
-	c.buy_click.connect(test)
 	Global.cake_changed.connect(update)
+	Global.load_game()
+	$shop/Control.update_prices()
 	update()
 func _on_button_pressed() -> void:
 	Global.add_cake(Global.cc)
-
+	$AudioStreamPlayer2D3.play()
 	var tween = create_tween()
 	tween.tween_property(b, "scale", Vector2(0.95, 0.95), 0.05)
 	tween.tween_property(b, "scale", Vector2(1, 1), 0.08)
-
+	$AudioStreamPlayer2D3.play()
 	update()
 	show_plus()
 
 func update(_cake = 0):
-	a.text = "케이크: " + str(snapped(Global.cake, 1))
+	a.text = "케이크: " + Global.format_number(Global.cake)
 
 func shopopen() -> void:
 	s.visible = true
-
+	$AudioStreamPlayer2D2.play()
 func _physics_process(_delta):
 	if Input.is_action_just_pressed("shop"):
 		s.visible = true
 	elif Input.is_action_just_pressed("close"):
 		s.visible = false
-
-func test(name):
-	match name:
-		"uj":
-			if Global.cake >= pru:
-				Global.spend_cake(pru)
-				Global.cc += 1
-				pru *= 1.3
-				ujpr.emit(pru)
-
-		"jj":
-			if Global.cake >= prj:
-				Global.spend_cake(prj)
-				Global.cc += 15
-				prj *= 1.3
-				jjpr.emit(prj)
-
-		"sd":
-			if Global.cake >= prs:
-				Global.spend_cake(prs)
-				Global.cc += 100
-				prs *= 1.3
-				sdpr.emit(prs)
-
-	update()
-
-
-
-	update()
 
 func _on_timer_timeout() -> void:
 	Global.add_cake(Global.cp)
@@ -81,13 +43,21 @@ func _on_timer_timeout() -> void:
 
 
 func _process(_delta):
-	if Global.cake >= 1000000:
-		get_tree().change_scene_to_file("res://ending.tscn")
 	$AnimatedSprite2D.play("default")
+	if Global.gt > 0:
+		$Sprite2D7.visible = true
+	if Global.ov > 0:
+		$Sprite2D8.visible = true
+	if Global.bt > 0:
+		$Sprite2D9.visible = true
+	if Global.bb > 0:
+		$Sprite2D10.visible = true
+	if Global.sh > 0:
+		$Sprite2D11.visible = true
 func show_plus():
 	var label = Label.new()
 
-	label.text = "+" + str(Global.cc)
+	label.text = "+" + Global.format_number(Global.cc)
 	label.position = b.position + Vector2(40, -20)
 
 	label.add_theme_font_size_override("font_size", 60)
@@ -114,3 +84,8 @@ func show_plus():
 	)
 
 	tween.finished.connect(label.queue_free)
+
+
+func _on_texture_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://mainscreen.tscn")
+	Global.save_game()

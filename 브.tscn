@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cgvtuvoxi22gb"]
+
+[ext_resource type="Script" uid="uid://dsfxyvokwsekm" path="res://브.gd" id="1_dd07p"]
+[ext_resource type="AudioStream" uid="uid://cxye47qjyf3bu" path="res://kenney_ui-audio/Audio/switch22.ogg" id="2_umecu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
+font_size = 32
+font_color = Color(1, 0.93333334, 0.46666667, 0.8666667)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(1, 0.5529412, 0.61960787, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1094139165]
+script = ExtResource("1_dd07p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1657343270]
+offset_right = 1188.0
+offset_bottom = 706.0
+color = Color(1, 0.972549, 0.90588236, 1)
+
+[node name="Button" type="Button" parent="." unique_id=1984572569]
+offset_left = 217.0
+offset_top = 127.0
+offset_right = 969.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 128
+text = "???"
+
+[node name="Label" type="Label" parent="." unique_id=343262071]
+offset_left = 432.0
+offset_top = 59.0
+offset_right = 703.0
+offset_bottom = 104.0
+text = "30,000,000,000🍰"
+label_settings = SubResource("LabelSettings_bjqgx")
+
+[node name="Button2" type="Button" parent="." unique_id=836619028]
+offset_left = 49.0
+offset_top = 566.0
+offset_right = 142.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 26
+text = "뒤로
+"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1146132844]
+stream = ExtResource("2_umecu")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

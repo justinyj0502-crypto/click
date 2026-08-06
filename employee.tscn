@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://c28024l0h07c8" path="res://Sprite-0007.png" id="2_wrfqp"]
 [ext_resource type="Texture2D" uid="uid://b0flwdc3yharr" path="res://Sprite-0008.png" id="3_3bulx"]
 [ext_resource type="Texture2D" uid="uid://sbxfie131oki" path="res://로봇.png" id="4_gnxic"]
+[ext_resource type="PackedScene" uid="uid://bpo1jdabm1e7f" path="res://employee2.tscn" id="5_3bulx"]
+[ext_resource type="AudioStream" uid="uid://cxye47qjyf3bu" path="res://kenney_ui-audio/Audio/switch22.ogg" id="6_gnxic"]
+[ext_resource type="AudioStream" uid="uid://bqb8vpal3s4yx" path="res://confirmation_002.ogg" id="7_kepu4"]
+[ext_resource type="AudioStream" uid="uid://d3v0v26iq65kk" path="res://back_002.ogg" id="8_n5qrp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
 font_size = 64
@@ -77,9 +81,10 @@ outline_color = Color(0, 0, 0, 1)
 shadow_color = Color(1, 0.5529412, 0.61960787, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wrfqp"]
-font_size = 33
-font_color = Color(0.7372549, 0.92941177, 0.8901961, 1)
-shadow_size = 10
+font_size = 32
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 16
 shadow_color = Color(1, 0.9647059, 0.827451, 0.9098039)
 
 [node name="emplyee" type="Control" unique_id=724082851]
@@ -94,8 +99,8 @@ script = ExtResource("1_44iv1")
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1493283183]
 layout_mode = 0
 offset_left = -32.0
-offset_top = 5.0
-offset_right = 1149.0
+offset_top = -5.0
+offset_right = 1239.0
 offset_bottom = 666.0
 color = Color(1, 0.972549, 0.90588236, 1)
 
@@ -112,9 +117,8 @@ label_settings = SubResource("LabelSettings_bjqgx")
 layout_mode = 0
 offset_left = 145.00002
 offset_top = 183.00003
-offset_right = 177.00002
-offset_bottom = 215.00003
-scale = Vector2(10, 10)
+offset_right = 465.0
+offset_bottom = 503.00003
 texture_normal = ExtResource("2_wrfqp")
 stretch_mode = 0
 
@@ -122,9 +126,8 @@ stretch_mode = 0
 layout_mode = 0
 offset_left = 448.0
 offset_top = 182.00002
-offset_right = 480.0
-offset_bottom = 214.00003
-scale = Vector2(10, 10)
+offset_right = 768.0
+offset_bottom = 502.0
 texture_normal = ExtResource("3_3bulx")
 stretch_mode = 0
 
@@ -132,9 +135,8 @@ stretch_mode = 0
 layout_mode = 0
 offset_left = 777.0
 offset_top = 176.00002
-offset_right = 809.0
-offset_bottom = 208.00003
-scale = Vector2(10, 10)
+offset_right = 1097.0
+offset_bottom = 496.0
 texture_normal = ExtResource("4_gnxic")
 stretch_mode = 0
 
@@ -192,11 +194,11 @@ offset_bottom = 7.0
 
 [node name="Label" type="Label" parent="제빵사1/Label" unique_id=1039291273]
 layout_mode = 0
-offset_left = -39.0
-offset_top = 402.0
-offset_right = 176.0
-offset_bottom = 447.0
-text = "18,000cake🍰"
+offset_left = -14.0
+offset_top = 404.0
+offset_right = 201.0
+offset_bottom = 449.0
+text = "18Kcake🍰"
 label_settings = SubResource("LabelSettings_m5nte")
 
 [node name="로봇1" type="Label" parent="." unique_id=1078453340]
@@ -227,19 +229,19 @@ label_settings = SubResource("LabelSettings_8p2kq")
 
 [node name="Label" type="Label" parent="로봇1/Label/Label2" unique_id=1622510959]
 layout_mode = 0
-offset_left = -38.0
-offset_top = 410.0
-offset_right = 196.0
-offset_bottom = 455.0
-text = "250,000cake🍰"
+offset_left = -12.0
+offset_top = 412.0
+offset_right = 222.0
+offset_bottom = 457.0
+text = "250Kcake🍰"
 label_settings = SubResource("LabelSettings_mop80")
 
 [node name="cake" type="Label" parent="." unique_id=485168870]
 layout_mode = 0
-offset_left = 942.0
-offset_top = 49.0
-offset_right = 982.0
-offset_bottom = 94.0
+offset_left = 19.0
+offset_top = 143.0
+offset_right = 59.0
+offset_bottom = 189.0
 label_settings = SubResource("LabelSettings_wrfqp")
 
 [node name="Button" type="Button" parent="." unique_id=680485522]
@@ -251,7 +253,30 @@ offset_bottom = 631.0
 theme_override_font_sizes/font_size = 36
 text = "뒤로"
 
+[node name="Button2" type="Button" parent="." unique_id=794641482]
+layout_mode = 0
+offset_left = 1001.0
+offset_top = 572.0
+offset_right = 1094.0
+offset_bottom = 632.0
+theme_override_font_sizes/font_size = 36
+text = "1/2"
+
+[node name="Control" parent="." unique_id=1865756780 instance=ExtResource("5_3bulx")]
+visible = false
+layout_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1659107154]
+stream = ExtResource("6_gnxic")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=1623084917]
+stream = ExtResource("7_kepu4")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=2115248041]
+stream = ExtResource("8_n5qrp")
+
 [connection signal="pressed" from="알바" to="." method="_on_알바_pressed"]
 [connection signal="pressed" from="제빵사" to="." method="_on_제빵사_pressed"]
 [connection signal="pressed" from="로봇" to="." method="_on_로봇_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

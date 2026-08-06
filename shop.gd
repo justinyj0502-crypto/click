@@ -7,18 +7,18 @@ extends Control
 
 func close() -> void:
 	shop.visible = false
-
+	$AudioStreamPlayer2D.play()
 func upgrade() -> void:
 	$Control.visible = true
-
+	$AudioStreamPlayer2D.play()
 func _ready() -> void:
 	game.ck.connect(cake)
 	Global.cake_changed.connect(update)
 	update()
 func cake(cake):
-	cakecount.text = "케이크: " + str(snapped(cake,1))
+	cakecount.text = "케이크: " + Global.format_number(Global.cake)
 func update(_cake = 0):
-	cakecount.text = "케이크: " + str(snapped(Global.cake, 1))
+	cakecount.text = "케이크: " + Global.format_number(Global.cake)
 
 #func _on_texture_button_pressed() -> void:
 #	$emplyee.visible = true
@@ -26,3 +26,9 @@ func update(_cake = 0):
 
 func _on_texture_button_pressed() -> void:
 	$emplyee.visible = true
+	$AudioStreamPlayer2D.play()
+
+
+func _on_button_pressed() -> void:
+	$Node2D.visible = true
+	$AudioStreamPlayer2D.play()

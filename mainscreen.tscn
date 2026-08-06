@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://i2act10g7ry5"]
 
-[ext_resource type="Texture2D" uid="uid://nf706blqb168" path="res://Sprite-0002.png" id="1_i7bbc"]
 [ext_resource type="Script" uid="uid://wwhdy6x4xblv" path="res://mainscreen.gd" id="1_ljyqm"]
 [ext_resource type="Texture2D" uid="uid://dsqacme8i4o2y" path="res://dlalwl/다랜드.png" id="2_185gw"]
+[ext_resource type="Texture2D" uid="uid://82wb2h8le7v7" path="res://케이크.png" id="3_3rbt6"]
 [ext_resource type="PackedScene" uid="uid://3mq25dhdgxg4" path="res://credit.tscn" id="3_185gw"]
 [ext_resource type="Texture2D" uid="uid://b5r0ge6tw2xt2" path="res://Sprite-0010.png" id="4_ljyqm"]
 
@@ -47,9 +47,9 @@ label_settings = SubResource("LabelSettings_bjqgx")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1853246126]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1051666690]
-position = Vector2(-6, -104)
-scale = Vector2(10, 8.661)
-texture = ExtResource("1_i7bbc")
+position = Vector2(-5.000001, -103.99999)
+scale = Vector2(9.53125, 8.661)
+texture = ExtResource("3_3rbt6")
 
 [node name="시작" type="Button" parent="." unique_id=1426907660]
 offset_left = -189.0
@@ -91,5 +91,17 @@ rotation = 0.13962634
 scale = Vector2(5, 5)
 texture = ExtResource("4_ljyqm")
 
+[node name="리셋" type="Button" parent="." unique_id=1715401112]
+visible = false
+offset_left = 53.0
+offset_top = 222.0
+offset_right = 196.0
+offset_bottom = 288.0
+text = "리셋"
+
 [connection signal="pressed" from="시작" to="." method="start"]
+[connection signal="focus_entered" from="끝" to="." method="_on_끝_focus_entered"]
+[connection signal="mouse_entered" from="끝" to="." method="_on_끝_mouse_entered"]
 [connection signal="pressed" from="끝" to="." method="end"]
+[connection signal="pressed" from="도움말" to="." method="_on_도움말_pressed"]
+[connection signal="pressed" from="리셋" to="." method="_on_리셋_pressed"]

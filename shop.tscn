@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://b8n8yenocblys" path="res://shop.gd" id="1_viryw"]
 [ext_resource type="PackedScene" uid="uid://b7omp8vy4q71y" path="res://click.tscn" id="2_e7rdd"]
 [ext_resource type="PackedScene" uid="uid://25tcn6vvv7my" path="res://employee.tscn" id="3_blqjs"]
+[ext_resource type="AudioStream" uid="uid://cxye47qjyf3bu" path="res://kenney_ui-audio/Audio/switch22.ogg" id="4_fgaav"]
+[ext_resource type="PackedScene" uid="uid://cgvtuvoxi22gb" path="res://브.tscn" id="5_6lah5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
 font_size = 64
@@ -14,10 +16,10 @@ shadow_color = Color(1, 1, 0.2, 0.8)
 
 [sub_resource type="LabelSettings" id="LabelSettings_e7rdd"]
 font_size = 32
-font_color = Color(0.7372549, 0.92941177, 0.8901961, 1)
-outline_color = Color(1, 0.9647059, 0.827451, 0.9098039)
-shadow_size = 10
-shadow_color = Color(1, 0.9647059, 0.827451, 0.9098039)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 16
+shadow_color = Color(1, 1, 0.7921569, 1)
 
 [node name="shop" type="Control" unique_id=331804872]
 layout_mode = 3
@@ -43,16 +45,16 @@ offset_bottom = 661.0
 [node name="ColorRect" type="ColorRect" parent="Panel" unique_id=2127302340]
 layout_mode = 0
 offset_left = -32.0
-offset_top = 5.0
-offset_right = 1150.0
+offset_top = -10.0
+offset_right = 1213.0
 offset_bottom = 666.0
 color = Color(1, 0.972549, 0.90588236, 1)
 
 [node name="TextureButton" type="Button" parent="Panel" unique_id=804493580]
 layout_mode = 0
-offset_left = 642.0
+offset_left = 600.0
 offset_top = 247.0
-offset_right = 843.0
+offset_right = 801.0
 offset_bottom = 420.0
 theme_override_font_sizes/font_size = 41
 text = "고용
@@ -93,11 +95,23 @@ text = "상점닫기
 
 [node name="cake" type="Label" parent="Panel" unique_id=149211391]
 layout_mode = 0
-offset_left = 942.0
-offset_top = 49.0
-offset_right = 982.0
-offset_bottom = 72.0
+offset_left = 933.0
+offset_top = 43.0
+offset_right = 973.0
+offset_bottom = 88.0
 label_settings = SubResource("LabelSettings_e7rdd")
+
+[node name="Button" type="Button" parent="." unique_id=1183216645]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.39200002
+anchor_bottom = 0.1
+offset_left = 878.0
+offset_top = 252.0
+offset_right = 1072.32
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 32
+text = "???"
 
 [node name="Control" parent="." unique_id=1664565084 instance=ExtResource("2_e7rdd")]
 visible = false
@@ -107,6 +121,13 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=382964772]
+stream = ExtResource("4_fgaav")
+
+[node name="Node2D" parent="." unique_id=1094139165 instance=ExtResource("5_6lah5")]
+visible = false
+
 [connection signal="pressed" from="Panel/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="upgrade"]
 [connection signal="pressed" from="Panel/close" to="." method="close"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

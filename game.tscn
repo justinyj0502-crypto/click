@@ -6,20 +6,19 @@
 [ext_resource type="Texture2D" uid="uid://cvu6x1ihcblpi" path="res://나무판자.png" id="2_j5wjh"]
 [ext_resource type="Script" uid="uid://0n4se7ypqepd" path="res://button.gd" id="3_fc0e3"]
 [ext_resource type="Texture2D" uid="uid://db0n585mijqt4" path="res://Sprite-0001.png" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://5nl8mbscsrra" path="res://whgeh.png" id="6_boyg6"]
+[ext_resource type="Texture2D" uid="uid://c8ytgkoy5k1tv" path="res://오븐.png" id="7_e36ub"]
 [ext_resource type="Texture2D" uid="uid://dv3v1whs1hgyf" path="res://Sprite-0013.png" id="7_vef74"]
+[ext_resource type="Texture2D" uid="uid://bnqy3d6ttlvay" path="res://반죽기.png" id="8_hb5m1"]
 [ext_resource type="Texture2D" uid="uid://b5r0ge6tw2xt2" path="res://Sprite-0010.png" id="8_hve3p"]
+[ext_resource type="Texture2D" uid="uid://bajoqdpncqxtd" path="res://버그.png" id="9_x5p1p"]
+[ext_resource type="AudioStream" uid="uid://qoryky7720lr" path="res://freesound_community-cottagecore-17463.mp3" id="10_hve3p"]
 [ext_resource type="Texture2D" uid="uid://chyrd7uyigh1h" path="res://Sprite-0003.png" id="10_mfdv2"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
-font_size = 64
-outline_size = 3
-outline_color = Color(0, 0, 0, 1)
-shadow_size = 16
-shadow_color = Color(1, 1, 0.7921569, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_8jovo"]
-font_size = 64
-font_color = Color(0.45323175, 0.45323175, 0.45323175, 1)
+[ext_resource type="Texture2D" uid="uid://dpta34qaq8tqk" path="res://신손.png" id="10_qhcbd"]
+[ext_resource type="AudioStream" uid="uid://bmp22qtpvlvwa" path="res://sergequadrado-cool-hip-hop-loop-251857.mp3" id="11_mfdv2"]
+[ext_resource type="AudioStream" uid="uid://cxye47qjyf3bu" path="res://kenney_ui-audio/Audio/switch22.ogg" id="12_iotsf"]
+[ext_resource type="AudioStream" uid="uid://djq64slxjbjgw" path="res://drop_002.ogg" id="18_rvswv"]
+[ext_resource type="Texture2D" uid="uid://b28ykaovssq55" path="res://main.png" id="19_boyg6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iotsf"]
 atlas = ExtResource("10_mfdv2")
@@ -57,18 +56,40 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_bjqgx"]
+font_size = 64
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 16
+shadow_color = Color(1, 1, 0.7921569, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8jovo"]
+font_size = 64
+font_color = Color(0.45323175, 0.45323175, 0.45323175, 1)
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_8jovo"]
+shuffle = true
+stream_count = 2
+stream_0 = ExtResource("10_hve3p")
+stream_1 = ExtResource("11_mfdv2")
+
+[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_jre5i"]
+loop = false
+stream_count = 1
+stream_0 = ExtResource("12_iotsf")
+
 [node name="game" type="Node2D" unique_id=1292408160]
 script = ExtResource("1_feb5d")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=988536836]
-offset_left = -603.0
-offset_top = -419.0
-offset_right = 639.0
-offset_bottom = 279.0
+offset_left = -661.0
+offset_top = -406.0
+offset_right = 581.0
+offset_bottom = 292.0
 color = Color(0.96862745, 0.9411765, 0.84705883, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=974142224]
-position = Vector2(49, 334)
+position = Vector2(-26, 330)
 scale = Vector2(10.3203125, 7.15625)
 texture = ExtResource("2_j5wjh")
 
@@ -85,7 +106,7 @@ texture = ExtResource("7_vef74")
 [node name="Sprite2D5" type="Sprite2D" parent="." unique_id=293300147]
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=73757268]
-position = Vector2(-278.00003, -166.00002)
+position = Vector2(-281, -148.00002)
 scale = Vector2(10, 10)
 texture = ExtResource("8_hve3p")
 
@@ -93,11 +114,66 @@ texture = ExtResource("8_hve3p")
 position = Vector2(-17, 52.00002)
 scale = Vector2(14.3125, 8.75)
 
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=1965590713]
+visible = false
+position = Vector2(96.00003, 195)
+rotation = 0.54105204
+scale = Vector2(5, 5)
+texture = ExtResource("6_boyg6")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=252412100]
+visible = false
+position = Vector2(-441, 92)
+scale = Vector2(10, 10)
+texture = ExtResource("7_e36ub")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1378274593]
+visible = false
+position = Vector2(-349, 245.00003)
+rotation = 0.7853982
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("8_hb5m1")
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1631135818]
+visible = false
+position = Vector2(-93.999985, 246.99997)
+rotation = 0.5201081
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("9_x5p1p")
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=1375503918]
+visible = false
+position = Vector2(169, -189)
+rotation = -0.055850536
+scale = Vector2(7.9999995, 7.9999995)
+texture = ExtResource("10_qhcbd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393334026]
+position = Vector2(219, 109)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+frame_progress = 0.037053254
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=201388830]
+position = Vector2(200.00002, 110)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+frame_progress = 0.039108478
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=826629938]
+position = Vector2(-257, 136.99998)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_bjqgx")
+autoplay = "default"
+frame_progress = 0.6201644
+
 [node name="Button" type="TextureButton" parent="." unique_id=278923630]
-offset_left = -175.99998
-offset_top = -153.99998
-offset_right = 144.00002
-offset_bottom = 166.00002
+offset_left = -159.0
+offset_top = -160.0
+offset_right = 161.0
+offset_bottom = 160.0
 texture_normal = ExtResource("1_80nbo")
 texture_pressed = ExtResource("1_80nbo")
 texture_hover = ExtResource("1_80nbo")
@@ -109,10 +185,10 @@ script = ExtResource("3_fc0e3")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=534114856]
 
 [node name="cake count" type="Label" parent="." unique_id=2103438691]
-offset_left = 198.0
-offset_top = -257.0
-offset_right = 238.0
-offset_bottom = -234.0
+offset_left = -531.0
+offset_top = -313.0
+offset_right = -491.0
+offset_bottom = -225.0
 label_settings = SubResource("LabelSettings_bjqgx")
 
 [node name="shopopen" type="TextureButton" parent="." unique_id=1609969971]
@@ -131,16 +207,21 @@ offset_right = 346.0
 offset_bottom = 286.0
 text = "상점"
 
+[node name="TextureButton" type="TextureButton" parent="." unique_id=79429633]
+offset_left = 360.00003
+offset_top = -344.0
+offset_right = 400.00003
+offset_bottom = -304.0
+scale = Vector2(5, 5)
+texture_normal = ExtResource("19_boyg6")
+stretch_mode = 0
+
 [node name="shop" parent="." unique_id=331804872 instance=ExtResource("2_fc0e3")]
 visible = false
 offset_left = -569.0
 offset_top = -347.0
 offset_right = -529.0
 offset_bottom = -307.0
-
-[node name="Node2D2" type="Node2D" parent="." unique_id=1779198909]
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1376107555]
 
 [node name="Label" type="Label" parent="." unique_id=49073025]
 visible = false
@@ -150,6 +231,8 @@ offset_right = 460.0
 offset_bottom = 233.0
 text = "케이크를 클릭하여 케이크만들기"
 label_settings = SubResource("LabelSettings_8jovo")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1376107555]
 
 [node name="tuto" type="Button" parent="." unique_id=1405788517]
 visible = false
@@ -166,29 +249,19 @@ theme_override_colors/icon_hover_pressed_color = Color(0.67058825, 0.67058825, 0
 [node name="Timer" type="Timer" parent="." unique_id=1162690909]
 autostart = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1393334026]
-position = Vector2(219, 109)
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_bjqgx")
-autoplay = "default"
-frame_progress = 0.037053254
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=766241405]
+stream = SubResource("AudioStreamPlaylist_8jovo")
+autoplay = true
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="." unique_id=201388830]
-position = Vector2(200.00002, 110)
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_bjqgx")
-autoplay = "default"
-frame_progress = 0.039108478
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=698317859]
+stream = SubResource("AudioStreamPlaylist_jre5i")
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="." unique_id=826629938]
-position = Vector2(215, 114)
-scale = Vector2(5, 5)
-sprite_frames = SubResource("SpriteFrames_bjqgx")
-autoplay = "default"
-frame_progress = 0.6201644
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="." unique_id=2052698480]
+stream = ExtResource("18_rvswv")
 
 [connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="shopopen" to="." method="shopopen"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="tuto" to="." method="_on_tuto_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

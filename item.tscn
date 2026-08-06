@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://boyxguhf8b2xg"]
+
+[ext_resource type="Texture2D" uid="uid://5nl8mbscsrra" path="res://whgeh.png" id="1_tnite"]
+
+[node name="Node2D" type="Node2D" unique_id=290392669]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=740149288]
+position = Vector2(52, 36)
+scale = Vector2(4.25, 3.25)
+texture = ExtResource("1_tnite")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=23250910]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D" unique_id=781517209]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D" unique_id=914616404]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1547856858]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1135337197]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=192558296]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=286366807]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1246411979]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=1747067804]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D/Sprite2D" unique_id=225097326]
