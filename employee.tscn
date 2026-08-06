@@ -98,10 +98,10 @@ script = ExtResource("1_44iv1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1493283183]
 layout_mode = 0
-offset_left = -32.0
-offset_top = -5.0
-offset_right = 1239.0
-offset_bottom = 666.0
+offset_left = -185.0
+offset_top = -155.0
+offset_right = 1367.0
+offset_bottom = 815.0
 color = Color(1, 0.972549, 0.90588236, 1)
 
 [node name="Label" type="Label" parent="." unique_id=1903313712]

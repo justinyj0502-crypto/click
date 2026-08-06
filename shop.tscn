@@ -44,10 +44,10 @@ offset_bottom = 661.0
 
 [node name="ColorRect" type="ColorRect" parent="Panel" unique_id=2127302340]
 layout_mode = 0
-offset_left = -32.0
-offset_top = -10.0
-offset_right = 1213.0
-offset_bottom = 666.0
+offset_left = -306.0
+offset_top = -254.0
+offset_right = 1446.0
+offset_bottom = 817.0
 color = Color(1, 0.972549, 0.90588236, 1)
 
 [node name="TextureButton" type="Button" parent="Panel" unique_id=804493580]

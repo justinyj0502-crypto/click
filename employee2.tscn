@@ -103,10 +103,10 @@ script = ExtResource("1_xl5o6")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.001
-offset_left = 1.1520001
-offset_top = -12.0
-offset_right = 1215.0
-offset_bottom = 669.0
+offset_left = -321.819
+offset_top = -173.0
+offset_right = 1467.0
+offset_bottom = 790.0
 color = Color(1, 0.972549, 0.90588236, 1)
 
 [node name="상점" type="Label" parent="." unique_id=727106881]

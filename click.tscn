@@ -163,10 +163,10 @@ script = ExtResource("1_ocfx5")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1007696840]
 layout_mode = 0
-offset_left = -5.0
-offset_top = 2.0
-offset_right = 1162.0
-offset_bottom = 657.0
+offset_left = -209.0
+offset_top = -323.0
+offset_right = 1323.0
+offset_bottom = 945.0
 color = Color(1, 0.972549, 0.90588236, 1)
 
 [node name="유제" type="TextureButton" parent="." unique_id=1399030509]
