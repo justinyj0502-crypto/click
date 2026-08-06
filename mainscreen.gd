@@ -30,3 +30,5 @@ func _on_끝_mouse_entered() -> void:
 
 func _on_리셋_pressed() -> void:
 	Global.reset_game()
+func _on_도움말_pressed():
+	get_tree().change_scene_to_file("res://tip.tscn")
